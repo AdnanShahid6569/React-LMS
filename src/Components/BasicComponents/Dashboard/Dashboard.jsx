@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
@@ -80,7 +79,7 @@ export default function Dashboard() {
         }}
       >
         <Toolbar />
-        <Box sx={{ overflow: 'auto' }}>
+        <Box sx={{ overflow: 'auto', background:'#F3F3E0'}}>
 
           <List>
             {/* Parent Item */}
@@ -141,7 +140,7 @@ export default function Dashboard() {
             {/* Nested Level */}
             <Collapse in={teacher} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Teacheradd')}}>
                   <ListItemIcon>
                     <PersonIcon />
                   </ListItemIcon>
@@ -152,7 +151,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('TeacherList')}}>
                   <ListItemIcon>
                     <PersonIcon />
                   </ListItemIcon>
@@ -183,7 +182,7 @@ export default function Dashboard() {
             {/* Nested Level */}
             <Collapse in={Subject} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Subjectadd')}}>
                   <ListItemIcon>
                     <IoIosAddCircle style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -194,7 +193,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Subjectlist')}}>
                   <ListItemIcon>
                   <SiBookstack style={{fontSize:"25px"}} />
                   </ListItemIcon>
@@ -224,7 +223,7 @@ export default function Dashboard() {
             {/* Nested Level */}
             <Collapse in={Syllabus} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }}>
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Syllabusadd')}}>
                   <ListItemIcon>
                     <SiGoogleforms style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -235,7 +234,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }}  onClick={()=>{navigate('Syllabuslist')}}>
                   <ListItemIcon>
                     <ReceiptLongIcon style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -264,7 +263,7 @@ export default function Dashboard() {
               {/* Nested Level */}
               <Collapse in={School} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('TeacherRegis')}} >
                   <ListItemIcon>
                     <GiArchiveRegister style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -275,7 +274,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('StudentRegis')}}>
                   <ListItemIcon>
                     <GiArchiveRegister style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -305,7 +304,7 @@ export default function Dashboard() {
               {/* Nested Level */}
               <Collapse in={Class} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Classform')}}>
                   <ListItemIcon>
                     <SiGoogleforms style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -316,7 +315,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Classlist')}}>
                   <ListItemIcon>
                     <ReceiptLongIcon style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -346,7 +345,7 @@ export default function Dashboard() {
               {/* Nested Level */}
               <Collapse in={Fees} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }}>
+                <ListItemButton sx={{ pl: 4 }}  onClick={()=>{navigate('FeeStructure')}}>
                   <ListItemIcon>
                     <MdFiberManualRecord style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -357,7 +356,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }}  onClick={()=>{navigate('FeeVoucher')}}>
                   <ListItemIcon>
                     <MdFiberManualRecord style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -367,7 +366,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('FeeSubmission')}}>
                   <ListItemIcon>
                     <MdFiberManualRecord style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -396,7 +395,7 @@ export default function Dashboard() {
               {/* Nested Level */}
               <Collapse in={Admission} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Admissionform')}}>
                   <ListItemIcon>
                     <SiGoogleforms style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -419,14 +418,14 @@ export default function Dashboard() {
                 <PiExamFill style={{fontSize:'25px'}}/>
                 </ListItemIcon>
                 <ListItemText primary="Exam"/>
-                {Admission ? <ExpandLess /> : <ExpandMore />}
+                {Exam ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
             </ListItem>
 
               {/* Nested Level */}
               <Collapse in={Exam} timeout='auto' unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }}>
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Examshedule')}}>
                   <ListItemIcon>
                     <MdFiberManualRecord style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -435,7 +434,7 @@ export default function Dashboard() {
               </List>
 
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }}>
+                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate('Examresult')}}>
                   <ListItemIcon>
                     <MdFiberManualRecord style={{fontSize:'25px'}}/>
                   </ListItemIcon>
@@ -450,9 +449,8 @@ export default function Dashboard() {
         </Box>
       </Drawer>
       
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 ,background:'#FBFFE4'}}>
         <Toolbar />
-        <h1>Welcome Dashboard</h1>
        <Outlet />
       
       </Box>
